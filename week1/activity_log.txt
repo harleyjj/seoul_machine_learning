@@ -1,0 +1,119 @@
+1) Inner merge of properties_2016 and train_2016
+
+'-' indicates further work needed on the feature:
+
+Airconditioningtypeid: replace None with 0 and convert all to string
+
+Architecturalstyletypeid: replace '' with '0'
+
+basementsqft: replace '' with '0', convert to int
+
+-bathroomcnt: replace None with -1
+
+bedroomcnt: replace None with -1, convert to int
+
+buildingclasstypeid: only 16 entries, remove column
+
+buildingqualitytypeid: replace None with 0, convert all to string
+
+-calculatedbathnbr: replace None with 0, merge with bathroomcnt
+
+decktypeid: convert '' to '0', check counts and delete or change to binary
+
+-finishedfloor1squarefeet: replace '' with '0', convert all to int
+
+-calculatedfinishedsquarefeet: replace None with 0, convert all to int
+
+-finishedsquarefeet12: replace None with 0
+
+-finishedsquarefeet13: replace '' with '0', convert all to int (check counts)
+
+-finishedsquarefeet15: replace None with 0, 87,247 unknown, use and remove
+
+-finishedsquarefeet50: replace '' with 0, convert all to int
+
+-finishedsquarefeet6: replace '' with 0, convert all to int, check counts
+
+fips: replace None with 0, convert all to string
+
+fireplacecnt: replace '' with 0, convert all to int
+
+-fullbathcnt: replace None with 0, compare with other bathroom features
+
+garagecarcnt: replace '' with '-1', convert all to int
+
+garagetotalsqft: replace '' with '-1', convert all to int
+
+hashottuborspa: convert to binary
+
+heatingorsystemtypeid: replace None with 0, convert all to string
+
+latitude: replace None with 0
+
+longitude: replace None with 0
+
+-lotsizesquarefeet: replace None with 0, convert all to int
+
+-poolcnt: replace '' with '0', convert to int
+
+-poolsizesum: replace '' with '0', convert all to int
+
+-pooltypeid10: replace '' with '0', convert to binary (consider merging pooltypes into one categorical variable)
+
+-pooltypeid2: replace '' with '0', convert to binary
+
+-pooltypeid7: relace '' with '0', convert to binary
+
+propertycountylandusecode: seems fine?
+
+propertylandusetypeid: replace None with 0, convert all to string
+
+propertyzoningdesc: replace '' with 'NA'
+
+rawcensustractandblock: replace None with 0, consider removing column
+
+-regionidcity: replace None with 0, possibly drop column
+
+-regionidcounty: replace None with 0, convert all to string
+
+-regionidneighborhood: replace None with 0
+
+-regionidzip: replace None with 0
+
+-roomcnt: replace None with -1
+
+storytypeid: replace '' with '0', make binary
+
+-threequarterbathnbr: replace '' with '0', convert to int
+
+typeconstructiontypeid: replace '' with '0'
+
+unitcnt: replace None with 0
+
+-yardbuildingsqft17: replace '' with '0', convert to int
+
+-yardbuildingsqft26: replace '' with '0', convert to int
+
+yearbuilt: replace None with 0
+
+-numberofstories: replace None with 0
+
+fireplaceflag: replace '' with '0', make binary
+
+-structuretaxvaluedollarcnt: replace None with 0
+
+-taxvaluedollarcnt: replace None with 0
+
+assessmentyear (change to assessed2015): replace None with 0, change to binary
+
+-landtaxvaluedollarcnt: replace None with 0
+
+-taxamount: replace None with 0
+
+-taxdelinquencyflag: replace '' with '0', 'Y' with '1', make binary
+
+-taxdelinquencyyear: replace None with 0
+
+censustractandblock: replace '' with '0'
+
+transactiondate: it's fine
