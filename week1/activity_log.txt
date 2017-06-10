@@ -1,5 +1,9 @@
 1) Inner merge of properties_2016 and train_2016
 
+2) Clean, alter, and merge features as noted below
+
+3) Create new feature - absolute value of log error
+
 '-' indicates further work needed on the feature:
 
 Airconditioningtypeid: replace None with 0 and convert all to string
@@ -12,33 +16,33 @@ basementsqft: replace '' with '0', convert to int
 
 bedroomcnt: replace None with -1, convert to int
 
-buildingclasstypeid: only 16 entries, remove column
+(dropped)buildingclasstypeid: only 16 entries, remove column
 
 buildingqualitytypeid: replace None with 0, convert all to string
 
--calculatedbathnbr: replace None with 0, merge with bathroomcnt
+(dropped)calculatedbathnbr: replace None with 0, merged with bathroomcnt
 
 decktypeid: convert '' to '0', check counts and delete or change to binary
 
--finishedfloor1squarefeet: replace '' with '0', convert all to int
+finishedfloor1squarefeet: replace '' with '0', convert all to int
 
--calculatedfinishedsquarefeet: replace None with 0, convert all to int
+calculatedfinishedsquarefeet: replace None with 0, convert all to int
 
--finishedsquarefeet12: replace None with 0
+(dropped)finishedsquarefeet12: replace None with 0, merged with calculatedfinishedsquarefeet
 
--finishedsquarefeet13: replace '' with '0', convert all to int (check counts)
+(dropped)finishedsquarefeet13: replace '' with '0', convert all to int, merged with calculatedfinishedsquarefeet
 
--finishedsquarefeet15: replace None with 0, 87,247 unknown, use and remove
+(dropped)finishedsquarefeet15: replace None with 0, 87,247 unknown, merged with calculatedfinishedsquarefeet
 
--finishedsquarefeet50: replace '' with 0, convert all to int
+(dropped)finishedsquarefeet50: replace '' with 0, convert all to int, merged with finishedfloor1squarefeet
 
--finishedsquarefeet6: replace '' with 0, convert all to int, check counts
+(dropped)finishedsquarefeet6: replace '' with 0, convert all to int, merged with calculatedfinishedsquarefeet
 
 fips: replace None with 0, convert all to string
 
 fireplacecnt: replace '' with 0, convert all to int
 
--fullbathcnt: replace None with 0, compare with other bathroom features
+(dropped)fullbathcnt: replace None with 0, merge with bathroomcnt
 
 garagecarcnt: replace '' with '-1', convert all to int
 
@@ -52,17 +56,17 @@ latitude: replace None with 0
 
 longitude: replace None with 0
 
--lotsizesquarefeet: replace None with 0, convert all to int
+lotsizesquarefeet: replace None with 0, convert all to int, max of pool, structure, or lot size
 
--poolcnt: replace '' with '0', convert to int
+poolcnt: replace '' with '0', convert to int
 
--poolsizesum: replace '' with '0', convert all to int
+poolsizesum: replace '' with '0', convert all to int
 
--pooltypeid10: replace '' with '0', convert to binary (consider merging pooltypes into one categorical variable)
+pooltypeid10: replace '' with '0', convert to binary (consider merging pooltypes into one categorical variable)
 
--pooltypeid2: replace '' with '0', convert to binary
+pooltypeid2: replace '' with '0', convert to binary
 
--pooltypeid7: relace '' with '0', convert to binary
+pooltypeid7: relace '' with '0', convert to binary
 
 propertycountylandusecode: seems fine?
 
@@ -84,15 +88,15 @@ rawcensustractandblock: replace None with 0, consider removing column
 
 storytypeid: replace '' with '0', make binary
 
--threequarterbathnbr: replace '' with '0', convert to int
+(dropped)threequarterbathnbr: replace '' with '0', convert to int, merged with bathroomcnt
 
 typeconstructiontypeid: replace '' with '0'
 
 unitcnt: replace None with 0
 
--yardbuildingsqft17: replace '' with '0', convert to int
+yardbuildingsqft17: replace '' with '0', convert to int
 
--yardbuildingsqft26: replace '' with '0', convert to int
+yardbuildingsqft26: replace '' with '0', convert to int
 
 yearbuilt: replace None with 0
 
