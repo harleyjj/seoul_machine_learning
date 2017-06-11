@@ -12,7 +12,7 @@ Architecturalstyletypeid: replace '' with '0'
 
 basementsqft: replace '' with '0', convert to int
 
--bathroomcnt: replace None with -1
+bathroomcnt: replace None with -1
 
 bedroomcnt: replace None with -1, convert to int
 
@@ -84,7 +84,7 @@ rawcensustractandblock: replace None with 0, consider removing column
 
 -regionidzip: replace None with 0
 
--roomcnt: replace None with -1
+roomcnt: replace None with -1, mzx of bed+bath and roomcnt
 
 storytypeid: replace '' with '0', make binary
 
