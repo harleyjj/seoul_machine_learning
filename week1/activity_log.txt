@@ -4,29 +4,29 @@
 
 3) Create new feature - absolute value of log error
 
-'-' indicates further work needed on the feature:
+4) Create a feature that counts empty values in important features.
 
-Airconditioningtypeid: replace None with 0 and convert all to string
+Airconditioningtypeid: replace None with 0 and convert all to string (68.307% unk)
 
-Architecturalstyletypeid: replace '' with '0'
+Architecturalstyletypeid: replace '' with '0'(99.713% unk)
 
-basementsqft: replace '' with '0', convert to int
+basementsqft: replace '' with '0', convert to int (99.953% unk)
 
-bathroomcnt: replace None with -1
+bathroomcnt: replace None with -1 (0.59% unk)
 
-bedroomcnt: replace None with -1, convert to int
+bedroomcnt: replace None with -1, convert to int (0.59% unk)
 
 (dropped)buildingclasstypeid: only 16 entries, remove column
 
-buildingqualitytypeid: replace None with 0, convert all to string
+buildingqualitytypeid: replace None with 0, convert all to string (36.831% unk)
 
 (dropped)calculatedbathnbr: replace None with 0, merged with bathroomcnt
 
-decktypeid: convert '' to '0', check counts and delete or change to binary
+decktypeid: convert '' to '0', check counts and delete or change to binary (99.275% unk)
 
-finishedfloor1squarefeet: replace '' with '0', convert all to int
+finishedfloor1squarefeet: replace '' with '0', convert all to int 
 
-calculatedfinishedsquarefeet: replace None with 0, convert all to int
+calculatedfinishedsquarefeet: replace None with 0, convert all to int (1.318% unk)
 
 (dropped)finishedsquarefeet12: replace None with 0, merged with calculatedfinishedsquarefeet
 
@@ -38,27 +38,27 @@ calculatedfinishedsquarefeet: replace None with 0, convert all to int
 
 (dropped)finishedsquarefeet6: replace '' with 0, convert all to int, merged with calculatedfinishedsquarefeet
 
-fips: replace None with 0, convert all to string
+fips: replace None with 0, convert all to string (0.59% unk)
 
-fireplacecnt: replace '' with 0, convert all to int
+fireplacecnt: replace '' with 0, convert all to int (89.421% unk)
 
 (dropped)fullbathcnt: replace None with 0, merge with bathroomcnt
 
-garagecarcnt: replace '' with '-1', convert all to int
+garagecarcnt: replace '' with '-1', convert all to int (67.034% unk)
 
-garagetotalsqft: replace '' with '-1', convert all to int
+garagetotalsqft: replace '' with '-1', convert all to int (67.034% unk)
 
-hashottuborspa: convert to binary
+hashottuborspa: convert to binary (97.396% unk)
 
-heatingorsystemtypeid: replace None with 0, convert all to string
+heatingorsystemtypeid: replace None with 0, convert all to string (38.245% unk)
 
-latitude: replace None with 0
+latitude: replace None with 0 (0.59% unknown)
 
-longitude: replace None with 0
+longitude: replace None with 0 (0.589% unknown)
 
-lotsizesquarefeet: replace None with 0, convert all to int, max of pool, structure, or lot size
+lotsizesquarefeet: replace None with 0, convert all to int, max of pool, structure, or lot size (0.951% unk)
 
-poolcnt: replace '' with '0', convert to int
+poolcnt: replace '' with '0', convert to int (79.009% unk)
 
 poolsizesum: replace '' with '0', convert all to int
 
@@ -70,54 +70,54 @@ pooltypeid7: relace '' with '0', convert to binary
 
 propertycountylandusecode: seems fine?
 
-propertylandusetypeid: replace None with 0, convert all to string
+propertylandusetypeid: replace None with 0, convert all to string (0.59% unknown)
 
-propertyzoningdesc: replace '' with 'NA'
+propertyzoningdesc: replace '' with 'NA' (35.786% unk)
 
-rawcensustractandblock: replace None with 0, consider removing column
+rawcensustractandblock: replace None with 0, consider removing column (0.588% unk)
 
--regionidcity: replace None with 0, possibly drop column
+regionidcity: replace None with 0, possibly drop column, convert to string (2.576% unk)
 
--regionidcounty: replace None with 0, convert all to string
+regionidcounty: replace None with 0, convert all to string (0.59% unk)
 
--regionidneighborhood: replace None with 0
+regionidneighborhood: replace None with 0, convert to string (60.344% unk)
 
--regionidzip: replace None with 0
+regionidzip: replace None with 0, convert to string (0.629% unk)
 
-roomcnt: replace None with -1, mzx of bed+bath and roomcnt
+roomcnt: replace None with -1, mzx of bed+bath and roomcnt (0.59% unk)
 
-storytypeid: replace '' with '0', make binary
+storytypeid: replace '' with '0', make binary (99.953% unk)
 
 (dropped)threequarterbathnbr: replace '' with '0', convert to int, merged with bathroomcnt
 
-typeconstructiontypeid: replace '' with '0'
+typeconstructiontypeid: replace '' with '0' (99.671% unk)
 
-unitcnt: replace None with 0
+unitcnt: replace None with 0 (35.742% unk)
 
-yardbuildingsqft17: replace '' with '0', convert to int
+yardbuildingsqft17: replace '' with '0', convert to int (97.086% unk)
 
-yardbuildingsqft26: replace '' with '0', convert to int
+yardbuildingsqft26: replace '' with '0', convert to int (99.895% unk)
 
-yearbuilt: replace None with 0
+yearbuilt: replace None with 0 (1.423% unk)
 
--numberofstories: replace None with 0
+numberofstories: replace None with 0 (77.349% unk)
 
-fireplaceflag: replace '' with '0', make binary
+fireplaceflag: replace '' with '0', make binary (99.756% unk)
 
--structuretaxvaluedollarcnt: replace None with 0
+structuretaxvaluedollarcnt: replace None with 0 
 
--taxvaluedollarcnt: replace None with 0
+taxvaluedollarcnt: replace None with 0, max of taxvaluedollarcnt and (structure + land) (0.592% unk)
 
 assessmentyear (change to assessed2015): replace None with 0, change to binary
 
--landtaxvaluedollarcnt: replace None with 0
+landtaxvaluedollarcnt: replace None with 0
 
--taxamount: replace None with 0
+taxamount: replace None with 0 (0.597% unk)
 
--taxdelinquencyflag: replace '' with '0', 'Y' with '1', make binary
+taxdelinquencyflag: replace '' with '0', 'Y' with '1', make binary
 
--taxdelinquencyyear: replace None with 0
+taxdelinquencyyear: replace None with 0
 
-censustractandblock: replace '' with '0'
+censustractandblock: replace '' with '0' (1.256% unk)
 
-transactiondate: it's fine
+transactiondate: chop day off
